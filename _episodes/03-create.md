@@ -112,7 +112,7 @@ nothing to commit (create/copy files and use "git add" to track)
 > > Note that we can track files in directories within a Git:
 > >
 > > ~~~
-> > $ touch axe nail                               # create files for variants of this story
+> > $ touch axe nail button                              # create files for variants of this story
 > > $ cd ..                                         # return to stonesoup directory
 > > $ ls different_versions                             # list contents of the different_versions directory
 > > $ git add different_versions/*                      # add all contents of stonesoup/different_versions
