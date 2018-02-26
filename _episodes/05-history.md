@@ -31,12 +31,11 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
 ~~~
 {: .output}
 
@@ -53,10 +52,11 @@ index a18d584..8b1782d 100644
 --- a/ingredients.txt
 +++ b/ingredients.txt
 @@ -3,3 +3,4 @@ salt
- 1/2 onion
- cilantro
- pepper
-+1/2 tomato
+1 stone
+salt
+handful shriveled carrots
+some old lentils
++a few leftover potatoes
 ~~~
 {: .output}
 
@@ -84,12 +84,11 @@ index 0c5ef26..8b1782d 100644
 --- a/ingredients.txt
 +++ b/ingredients.txt
 @@ -1,3 +1,6 @@
- 4 avocados
- salt
- 1/2 onion
-+cilantro
-+pepper
-+1/2 tomato
+1 stone
+salt
++handful shriveled carrots
++some old lentils
++a few leftover potatoes
 ~~~
 {: .output}
 
@@ -102,19 +101,19 @@ $ git show HEAD~2 ingredients.txt
 
 ~~~
 commit 29980dee91ca6b5588153a22598aafddc1a55bc2
-Author: The Guacmaster <guacmaster@guac.guac>
+Author: The Wanderer <wanderer@stone.soup>
 Date:   Thu Aug 3 15:49:06 2017 -0400
 
-    Add onions
+    The soup is almost ready, but would taste better with a few carrots
 
 diff --git a/ingredients.txt b/ingredients.txt
 index 075e446..0c5ef26 100644
 --- a/ingredients.txt
 +++ b/ingredients.txt
 @@ -1,2 +1,3 @@
- 4 avocados
- salt
-+1/2 onion
+1 stone
+salt
++handful shriveled carrots
 ~~~
 {: .output}
 
@@ -148,12 +147,11 @@ index 075e446..8b1782d 100644
 --- a/ingredients.txt
 +++ b/ingredients.txt
 @@ -1,2 +1,6 @@
- 4 avocados
- salt
-+1/2 onion
-+cilantro
-+pepper
-+1/2 tomato
+1 stone
+salt
++handful shriveled carrots
++some old lentils
++a few leftover potatoes
 ~~~
 {: .output}
 
@@ -172,12 +170,11 @@ index 075e446..8b1782d 100644
 --- a/ingredients.txt
 +++ b/ingredients.txt
 @@ -1,2 +1,6 @@
- 4 avocados
- salt
-+1/2 onion
-+cilantro
-+pepper
-+1/2 tomato
+1 stone
+salt
++handful shriveled carrots
++some old lentils
++a few leftover potatoes
 ~~~
 {: .output}
 
@@ -193,13 +190,12 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
-3 cups cayenne pepper
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
+moldy dried mushrooms
 ~~~
 {: .output}
 
@@ -233,11 +229,11 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
 ~~~
 {: .output}
 
@@ -260,7 +256,7 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
 ~~~
 {: .output}
@@ -396,45 +392,45 @@ moving backward and forward in time becomes much easier.
 
 > ## Understanding Workflow and History
 >
-> What is the output of cat equipment.txt at the end of this set of commands?
+> What is the output of cat utensils.txt at the end of this set of commands?
 >
 > ~~~
-> $ cd guac
-> $ nano equipment.txt #input the following text: mixing bowl
-> $ git add equipment.txt
-> $ nano equipment.txt #add the following text: spoon
-> $ git commit -m "Compile the utensils we need"
-> $ git checkout HEAD equipment.txt
-> $ cat equipment.txt #this will print the contents of equipment.txt to the screen
+> $ cd stonesoup
+> $ nano utensils.txt #input the following text: big kettle
+> $ git add utensils.txt
+> $ nano utensils.txt #add the following text: mixing spoon
+> $ git commit -m "We need some kitchen items"
+> $ git checkout HEAD utensils.txt
+> $ cat utensils.txt #this will print the contents of utensils.txt to the screen
 > ~~~
 > {: .bash}
 >
 > 1.
 >
 > ~~~
-> spoon
+> mixing spoon
 > ~~~
 > {: .output}
 >
 > 2.
 >
 > ~~~
-> mixing bowl
+> big kettle
 > ~~~
 > {: .output}
 >
 > 3.
 >
 > ~~~
-> mixing bowl
-> spoon
+> big kettle
+> mixing spoon
 > ~~~
 > {: .output}
 >
 > 4.
 >
 > ~~~
-> Error because you have changed equipment.txt without committing the changes
+> Error because you have changed utensils.txt without committing the changes
 > ~~~
 > {: .output}
 >
@@ -442,46 +438,46 @@ moving backward and forward in time becomes much easier.
 > >
 > > Line by line:
 > > ~~~
-> > $ cd guac
+> > $ cd stonesoup
 > > ~~~
 > > {: .bash}
-> > Enters into the 'guac' directory
+> > Enters into the 'stonesoup' directory
 > >
 > > ~~~
-> > $ nano equipment.txt #input the following text: mixing bowl
+> > $ nano utensils.txt #input the following text: big kettle
 > > ~~~
 > > {: .bash}
-> > We created a new file and wrote a sentence in it, but the file is not tracked by git.  
+> > We created a new file and wrote a line in it, but the file is not tracked by git.  
 > >
 > > ~~~
-> > $ git add equipment.txt
+> > $ git add utensils.txt
 > > ~~~
 > > {: .bash}
 > > Now the file is staged. The changes that have been made to the file until now will be committed in the next commit.
 > >
 > > ~~~
-> > $ nano equipment.txt #add the following text: spoon
+> > $ nano utensils.txt #add the following text: mixing spoon
 > > ~~~
 > > {: .bash}
 > > The file has been modified. The new changes are not staged because we have not added the file.
 > >
 > > ~~~
-> > $ git commit -m "Compile the utensils we need"
+> > $ git commit -m "We need some kitchen items"
 > > ~~~
 > > {: .bash}
-> > The changes that were staged (mixing bowl) have been committed. The changes that were not staged (spoon) have not. Our local working copy is different than the copy in our local repository.
+> > The changes that were staged (big kettle) have been committed. The changes that were not staged (mixing spoon) have not. Our local working copy is different than the copy in our local repository.
 > >
 > > ~~~
-> > $ git checkout HEAD equipment.txt
+> > $ git checkout HEAD utensils.txt
 > > ~~~
 > > {: .bash}
 > > With checkout we discard the changes in the working directory so that our local copy is exactly the same as our HEAD, the most recent commit.
 > >
 > > ~~~
-> > $ cat equipment.txt #this will print the contents of equipment.txt to the screen
+> > $ cat utensils.txt #this will print the contents of utensils.txt to the screen
 > > ~~~
 > > {: .bash}
-> > If we print equipment.txt we will get answer 2.
+> > If we print utensils.txt we will get answer 2.
 > >
 > {: .solution}
 {: .challenge}
@@ -509,13 +505,13 @@ moving backward and forward in time becomes much easier.
 > Exploring history is an important part of git, often it is a challenge to find
 > the right commit ID, especially if the commit is from several months ago.
 >
-> Imagine the `guac` project has more than 50 recipes that we've collected from friends and family.
+> Imagine the `stonesoup` project has more than 50 variants that we've collected from around the world.
 > You would like to find a commit when specific text in `ingredients.txt` was modified.
 > When you type `git log`, a very long list appeared,
 > How can you narrow down the search?
 >
-> Recorded that the `git diff` command allow us to explore one specific file,
-> e.g. `git diff ingredients.txt`. We can apply the similar idea here.
+> Recall that the `git diff` command allow us to explore one specific file,
+> e.g. `git diff ingredients.txt`. We can apply a similar idea here.
 >
 > ~~~
 > $ git log ingredients.txt
