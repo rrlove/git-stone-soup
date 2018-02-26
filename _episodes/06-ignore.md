@@ -11,16 +11,16 @@ keypoints:
 - "The `.gitignore` file tells Git what files to ignore."
 ---
 
-What if we have files that we do not want Git to track for us?
+What if we have files that we don't want Git to track for us?
 These could be backup files created by our editor, or intermediate files
 created during data analysis. 
 
-Our guac recipe has a "secret ingredient" that we don't want anyone to know about.
-Our first thought is to hide it among lots of similar files, so we do this:
+In collecting stone soup recipes from around the world, we come up with a lot of duplicates.
+In particular, we find a lot where the only ingredients added are carrots and potatoes:
 
 ~~~
-$ cd guac
-$ touch secret_sauce_1.txt secret_sauce_2.txt secret_sauce_3.txt secret_sauce_4.txt
+$ cd stonesoup
+$ touch carrots_and_potatoes_v1.txt carrots_and_potatoes_v2.txt carrots_and_potatoes_v3.txt carrots_and_potatoes.txt
 ~~~
 {: .bash}
 
@@ -36,10 +36,10 @@ On branch master
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	secret_sauce_1.txt
-	secret_sauce_2.txt
-	secret_sauce_3.txt
-	secret_sauce_4.txt
+	carrots_and_potatoes_v1.txt
+	carrots_and_potatoes_v2.txt
+	carrots_and_potatoes_v3.txt
+	carrots_and_potatoes_v4.txt
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
 {: .output}
@@ -58,12 +58,12 @@ $ cat .gitignore
 {: .bash}
 
 ~~~
-secret_sauce*
+carrots_and_potatoes_v*
 ~~~
 {: .output}
 
 These patterns tell Git to ignore any file whose name begins with 
-`secret_sauce`.
+`carrots_and_potatoes_v*`.
 (If any of these files were already being tracked,
 Git would continue to track them.)
 
@@ -107,20 +107,20 @@ nothing to commit, working directory clean
 As a bonus, using `.gitignore` helps us avoid accidentally adding to the repository files that we don't want to track:
 
 ~~~
-$ git add secret_sauce_4.txt
+$ git add carrots_and_potatoes_v4.txt
 ~~~
 {: .bash}
 
 ~~~
 The following paths are ignored by one of your .gitignore files:
-secret_sauce_4.txt
+carrots_and_potatoes_v4.txt
 Use -f if you really want to add them.
 ~~~
 {: .output}
 
 If we really want to override our ignore settings,
 we can use `git add -f` to force Git to add something. For example,
-`git add -f secret_sauce_4.txt`.
+`git add -f carrots_and_potatoes_v4.txt`.
 We can also always see the status of ignored files if we want:
 
 ~~~
@@ -133,10 +133,10 @@ On branch master
 Ignored files:
  (use "git add -f <file>..." to include in what will be committed)
 
-        secret_sauce_1.txt
-	secret_sauce_2.txt
-	secret_sauce_3.txt
-	secret_sauce_4.txt
+        carrots_and_potatoes_v1.txt
+	carrots_and_potatoes_v2.txt
+	carrots_and_potatoes_v3.txt
+	carrots_and_potatoes_v4.txt
 
 nothing to commit, working directory clean
 ~~~
