@@ -15,12 +15,12 @@ we can start using it.
 Let's create a directory for our work and then move into that directory:
 
 ~~~
-$ mkdir guac
-$ cd guac
+$ mkdir stonesoup
+$ cd stonesoup
 ~~~
 {: .bash}
 
-Then we tell Git to make `guac` a [repository]({{ page.root }}/reference/#repository)—a place where
+Then we tell Git to make `stonesoup` a [repository]({{ page.root }}/reference/#repository)—a place where
 Git can store versions of our files:
 
 ~~~
@@ -37,7 +37,7 @@ $ ls
 {: .bash}
 
 But if we add the `-a` flag to show everything,
-we can see that Git has created a hidden directory within `guac` called `.git`:
+we can see that Git has created a hidden directory within `stonesoup` called `.git`:
 
 ~~~
 $ ls -a
@@ -72,22 +72,22 @@ nothing to commit (create/copy files and use "git add" to track)
 
 > ## Places to Create Git Repositories
 >
-> We start a new project, `family_recipes`, related to our `guac` project.
+> We start a new project, `different_versions`, related to our `stonesoup` project.
 > We enter the following sequence of commands to
 > create one Git repository inside another:
 >
 > ~~~
 > $ cd                      # return to home directory
-> $ mkdir guac              # make a new directory guac
-> $ cd guac                 # go into guac
-> $ git init                # make the guac directory a Git repository
-> $ mkdir family_recipes    # make a sub-directory guac/family_recipes
-> $ cd family_recipes       # go into guac/family_recipes
-> $ git init                # make the family_recipes sub-directory a Git repository
+> $ mkdir stonesoup              # make a new directory guac
+> $ cd stonesoup                 # go into stonesoup
+> $ git init                # make the stonesoup directory a Git repository
+> $ mkdir different_versions    # make a sub-directory guac/different_versions
+> $ cd different_versions       # go into stonesoup/different_versions
+> $ git init                # make the different_versions sub-directory a Git repository
 > ~~~
 > {: .bash}
 >
-> Why is it a bad idea to do this? (Notice here that the `guac` project is now also tracking the entire `family_recipes` repository.)
+> Why is it a bad idea to do this? (Notice here that the `stonesoup` project is now also tracking the entire `different_versions` repository.)
 > How can we undo our last `git init`?
 >
 > > ## Solution
@@ -112,33 +112,33 @@ nothing to commit (create/copy files and use "git add" to track)
 > > Note that we can track files in directories within a Git:
 > >
 > > ~~~
-> > $ touch dad mom aunt_phoebe maria               # create recipe files
-> > $ cd ..                                         # return to guac directory
-> > $ ls family_recipes                             # list contents of the family_recipes directory
-> > $ git add family_recipes/*                      # add all contents of guac/family_recipes
-> > $ git status                                    # show family_recipes files in staging area
-> > $ git commit -m "add recipes from relatives"    # commit guac/family_recipes to guac Git repository
+> > $ touch axe nail                               # create files for variants of this story
+> > $ cd ..                                         # return to stonesoup directory
+> > $ ls different_versions                             # list contents of the different_versions directory
+> > $ git add different_versions/*                      # add all contents of stonesoup/different_versions
+> > $ git status                                    # show different_versions files in staging area
+> > $ git commit -m "add stories with different objects"    # commit stonesoup/different_versions to stonesoup Git repository
 > > ~~~
 > > {: .bash}
 > >
-> > Similarly, we can ignore (as discussed later) entire directories, such as the `family_recipes` directory:
+> > Similarly, we can ignore (as discussed later) entire directories, such as the `different_versions` directory:
 > >
 > > ~~~
-> > $ nano .gitignore # open the .gitignore file in the texteditor to add the family_recipes directory
+> > $ nano .gitignore # open the .gitignore file in the texteditor to add the different_versions directory
 > > $ cat .gitignore # if you run cat afterwards, it should look like this:
 > > ~~~
 > > {: .bash}
 > >
 > > ~~~
-> > family_recipes
+> > different_versions
 > > ~~~
 > > {: .output}
 > >
 > > To recover from this little mistake, we can just remove the `.git`
-> > folder in the family_recipes subdirectory. To do so we can run the following command from inside the 'family_recipes' directory:
+> > folder in the different_versions subdirectory. To do so we can run the following command from inside the 'different_versions' directory:
 > >
 > > ~~~
-> > $ rm -rf family_recipes/.git
+> > $ rm -rf different_versions/.git
 > > ~~~
 > > {: .bash}
 > >
