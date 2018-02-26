@@ -29,7 +29,7 @@ $ nano ingredients.txt
 Type the line below into the `ingredients.txt` file:
 
 ~~~
-4 avocados
+1 stone
 salt
 ~~~
 {: .output}
@@ -52,7 +52,7 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
 ~~~
 {: .output}
@@ -113,12 +113,12 @@ To get it to do that,
 we need to run one more command:
 
 ~~~
-$ git commit -m "Start our shopping list"
+$ git commit -m "Start the soup"
 ~~~
 {: .bash}
 
 ~~~
-[master bb13e9f] Start our shopping list
+[master bb13e9f] Start the soup
  1 file changed, 5 insertions(+)
  create mode 100644 ingredients.txt
 ~~~
@@ -165,10 +165,10 @@ $ git log
 
 ~~~
 commit 172a2f0d1da2034b94fb3a47ad182bfc04172caf
-Author: The Guacmaster <guacmaster@guac.guac>
+Author: The Wanderer <wanderer@stone.soup>
 Date:   Thu Aug 3 15:47:15 2017 -0400
 
-    Start our shopping list
+    Start the soup
 ~~~
 {: .output}
 
@@ -197,9 +197,9 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
+handful shriveled carrots
 ~~~
 {: .output}
 
@@ -242,9 +242,9 @@ index 075e446..0c5ef26 100644
 --- a/ingredients.txt
 +++ b/ingredients.txt
 @@ -1,2 +1,3 @@
- 4 avocados
- salt
-+1/2 onion
+1 stone
+salt
++handful shriveled carrots
 ~~~
 {: .output}
 
@@ -266,7 +266,7 @@ The output is cryptic because it is actually a series of computer
 After reviewing our change, it's time to commit it:
 
 ~~~
-$ git commit -m "Add onions"
+$ git commit -m "The soup is almost ready, but would taste better with a few carrots"
 $ git status
 ~~~
 {: .bash}
@@ -289,12 +289,12 @@ Let's fix that:
 
 ~~~
 $ git add ingredients.txt
-$ git commit -m "Add onions"
+$ git commit -m "The soup is almost ready, but would taste better with a few carrots"
 ~~~
 {: .bash}
 
 ~~~
-[master 29980de] Add onions
+[master 29980de] The soup is almost ready, but would taste better with a few carrots
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
@@ -345,10 +345,10 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
+handful shriveled carrots
+some old lentils
 ~~~
 {: .output}
 
@@ -363,10 +363,10 @@ index 0c5ef26..fd4db14 100644
 --- a/ingredients.txt
 +++ b/ingredients.txt
 @@ -1,3 +1,4 @@
- 4 avocados
- salt
- 1/2 onion
-+cilantro
+1 stone
+salt
+handful shriveled carrots
++some old lentils
 ~~~
 {: .output}
 
@@ -397,10 +397,10 @@ index 0c5ef26..fd4db14 100644
 --- a/ingredients.txt
 +++ b/ingredients.txt
 @@ -1,3 +1,4 @@
- 4 avocados
- salt
- 1/2 onion
-+cilantro
+1 stone
+salt
+handful withered carrots
++some old lentils
 ~~~
 {: .output}
 
@@ -410,12 +410,12 @@ and what's in the staging area.
 Let's save our changes:
 
 ~~~
-$ git commit -m "Add cilantro"
+$ git commit -m "The soup is almost ready, but some lentils would give it more body"
 ~~~
 {: .bash}
 
 ~~~
-[master e744ac7] Add cilantro
+[master e744ac7] The soup is almost ready, but some lentils would give it more body
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
@@ -442,22 +442,22 @@ $ git log
 
 ~~~
 commit e744ac7a2605fa15d55f75b0f5e00b61e756d815
-Author: The Guacmaster <guacmaster@guac.guac>
+Author: The Wanderer <wanderer@stone.soup>
 Date:   Thu Aug 3 15:51:22 2017 -0400
 
-    Add cilantro
+    The soup is almost ready, but some lentils would give it more body
 
 commit 29980dee91ca6b5588153a22598aafddc1a55bc2
-Author: The Guacmaster <guacmaster@guac.guac>
+Author: The Wanderer <wanderer@stone.soup>
 Date:   Thu Aug 3 15:49:06 2017 -0400
 
-    Add onions
+    The soup is almost ready, but would taste better with a few carrots
 
 commit 172a2f0d1da2034b94fb3a47ad182bfc04172caf
-Author: The Guacmaster <guacmaster@guac.guac>
+Author: The Wanderer <wanderer@stone.soup>
 Date:   Thu Aug 3 15:47:15 2017 -0400
 
-    Start our shopping list
+    Start the soup
 ~~~
 {: .output}
 
@@ -507,8 +507,8 @@ repository (`git commit`):
 > last commit made to `ingredients.txt`?
 >
 > 1. "Changes"
-> 2. "Added line 'cilantro' as last line of ingredients.txt"
-> 3. "Add cilantro"
+> 2. "Added line 'some old lentils' as last line of ingredients.txt"
+> 3. "Add lentils"
 >
 > > ## Solution
 > > Answer 1 is not descriptive enough,
@@ -561,11 +561,11 @@ repository (`git commit`):
 > > {: .bash}
 > >
 > > ~~~
-> > 4 avocados
+> > 1 stone
 > > salt
-> > 1/2 onion
-> > cilantro
-> > pepper
+> > handful shriveled carrots
+> > some old lentils
+> > a few leftover potatoes
 > > ~~~
 > > {: .output}
 > >
@@ -576,11 +576,9 @@ repository (`git commit`):
 > > {: .bash}
 > >
 > > ~~~
-> > 1. Wash the avocados and rinse the parsley and onion.
-> > 2. Dice the onion finely. Chop the cilantro roughly. Place in mixing bowl.
-> > 3. Slice open each avocado and scoop out the flesh into the bowl.
-> > 4. Smash avocado flesh.
-> > 5. Mix all ingredients well. Add salt and pepper to taste.
+> > 1. Place a stone in a big kettle
+> > 2. Cover with water. Boil.
+> > 3. Add whatever ingredients you find that might give it a bit of extra flavor...
 > > ~~~
 > > {: .output}
 > >
@@ -603,12 +601,12 @@ repository (`git commit`):
 > > If you are ready to commit use:
 > >
 > > ~~~
-> > $ git commit -m "Update with pepper and instructions"
+> > $ git commit -m "Add potatoes; write down instructions"
 > > ~~~
 > > {: .bash}
 > >
 > > ~~~
-> > [master f237e9f] Update with pepper and instructions
+> > [master f237e9f] Add potatoes; write down instructions
 > > 2 files changed, 6 insertions(+)
 > > create mode 100644 methods.txt
 > > ~~~
