@@ -29,12 +29,12 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
+dried parsnips
 ~~~
 {: .output}
 
@@ -47,13 +47,13 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
-peas
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
+dried parsnips
+stale donuts
 ~~~
 {: .output}
 
@@ -61,12 +61,12 @@ and then push the change to GitHub:
 
 ~~~
 $ git add ingredients.txt
-$ git commit -m "The New York Times said so"
+$ git commit -m "What about some donuts?"
 ~~~
 {: .bash}
 
 ~~~
-[master e3814e4] The New York Times said so
+[master e3814e4] What about some donuts?
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
@@ -82,7 +82,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 342 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/guacmaster/guac.git
+To https://github.com/wanderer/stonesoup.git
    7fb6b7e..e3814e4  master -> master
 ~~~
 {: .output}
@@ -98,13 +98,13 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
-lime juice
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
+dried parsnips
+thyme
 ~~~
 {: .output}
 
@@ -112,12 +112,12 @@ We can commit the change locally:
 
 ~~~
 $ git add ingredients.txt
-$ git commit -m "Add citrus"
+$ git commit -m "I have some thyme"
 ~~~
 {: .bash}
 
 ~~~
-[master 07ebc69] Add citrus
+[master 07ebc69] I have some thyme
  1 file changed, 5 insertion(+)
 ~~~
 {: .output}
@@ -130,9 +130,9 @@ $ git push
 {: .bash}
 
 ~~~
-To https://github.com/guacmaster/guac.git
+To https://github.com/wanderer/stonesoup.git
  ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'https://github.com/guacmaster/guac.git'
+error: failed to push some refs to 'https://github.com/wanderer/stonesoup.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
@@ -160,7 +160,7 @@ remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (1/1), done.
 remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From https://github.com/guacmaster/guac
+From https://github.com/wanderer/stonesoup
    12d2b5e..5fa9f4b  master     -> origin/master
 Auto-merging ingredients.txt
 CONFLICT (content): Merge conflict in ingredients.txt
@@ -177,16 +177,16 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
+dried parsnips
 <<<<<<< HEAD
-peas
+thyme
 =======
-lime juice
+stale donuts
 >>>>>>> 5fa9f4bbc64cfea4231f462afb1147b8e4703aaa
 ~~~
 {: .output}
@@ -210,13 +210,13 @@ $ cat ingredients.txt
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
-lime juice
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
+dried parsnips
+thyme
 ~~~
 {: .output}
 
@@ -245,7 +245,7 @@ Changes to be committed:
 {: .output}
 
 ~~~
-$ git commit -m "peas have no place in guacamole"
+$ git commit -m "Save them for dessert"
 ~~~
 {: .bash}
 
@@ -268,7 +268,7 @@ Compressing objects: 100% (6/6), done.
 Writing objects: 100% (6/6), 591 bytes | 0 bytes/s, done.
 Total 6 (delta 4), reused 0 (delta 0)
 remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
-To https://github.com/guacmaster/guac.git
+To https://github.com/wanderer/stonesoup.git
    5fa9f4b..3fec3a2  master -> master
 ~~~
 {: .output}
@@ -287,7 +287,7 @@ remote: Counting objects: 6, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 6 (delta 4), reused 6 (delta 4), pack-reused 0
 Unpacking objects: 100% (6/6), done.
-From https://github.com/guacmaster/conversions
+From https://github.com/wanderer/stonesoup
    5fa9f4b..3fec3a2  master     -> origin/master
 Updating 5fa9f4b..3fec3a2
 Fast-forward
@@ -304,13 +304,13 @@ $ cat ingredients
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
-lime juice
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
+dried parsnips
+thyme
 ~~~
 {: .output}
 
