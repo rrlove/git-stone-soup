@@ -12,10 +12,9 @@ keypoints:
 - "Version control also allows many people to work in parallel."
 ---
 
-We'll start by exploring how version control can be used
-to keep track of what one person did and when.
-Even if you aren't collaborating with other people,
-automated version control is much better than this situation:
+Many of you may use a form of version control already. The comic 
+below shows an example of informal version control by file name
+that is probably all too familiar to most of us:
 
 [![Piled Higher and Deeper by Jorge Cham, http://www.phdcomics.com/comics/archive_print.php?comicid=1531](../fig/phd101212s.png)](http://www.phdcomics.com)
 
@@ -27,7 +26,12 @@ processors let us deal with this a little better, such as Microsoft
 Word's [Track Changes](https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a) or Google Docs' [version
 history](https://support.google.com/docs/answer/190843?hl=en).
 
-Version control systems start with a base version of the document and
+This informal version control by file name has other drawbacks. As this diagram shows,
+if you're not scrupulous about the names you choose, you can quickly lose track
+of the relationship between versions:
+[![Bryan J. (2017) Excuse me, do you have a moment to talk about version control? *PeerJ Preprints* 5:e3159v2 https://doi.org/10.7287/peerj.preprints.3159v2](../fig/Bryan_fig1.svg)](https://doi.org/10.7287/peerj.preprints.3159v2)
+
+Formal version control systems start with a base version of the document and
 then save just the changes you made at each step of the way. You can
 think of it as a tape: if you rewind the tape and start at the base
 document, then you can play back each change and end up with your
