@@ -75,7 +75,7 @@ SSH to HTTPS.
 > (this one has a screencast).
 {: .callout}
 
-![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
+![Changing the Repository URL on GitHub](../fig/github-change-repo-string.svg)
 
 Copy that URL from the browser, go into the local `stonesoup` repository, and run
 this command:
