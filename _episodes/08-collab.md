@@ -28,7 +28,7 @@ The Owner needs to give the Collaborator access.
 On GitHub, click the settings button on the right,
 then select Collaborators, and enter your partner's username.
 
-![Adding Collaborators on GitHub](../fig/github-add-collaborators.png)
+![Adding Collaborators on GitHub](../fig/github-add-collaborators.svg)
 
 To accept access to the Owner's repo, the Collaborator
 needs to go to [https://github.com/notifications](https://github.com/notifications).
@@ -39,7 +39,7 @@ Next, the Collaborator needs to download a copy of the Owner's repository to her
 her `Desktop` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/guacmaster/guacmaster-guac.git
+$ git clone https://github.com/wanderer/wanderer-stonesoup.git
 ~~~
 {: .bash}
 
@@ -51,30 +51,30 @@ The Collaborator can now make a change in her clone of the Owner's repository,
 exactly the same way as we've been doing before:
 
 ~~~
-$ cd ~/Desktop/guacmaster-guac
+$ cd ~/Desktop/wanderer-stonesoup
 $ nano ingredients.txt
 $ cat ingredients.txt
 ~~~
 {: .bash}
 
 ~~~
-4 avocados
+1 stone
 salt
-1/2 onion
-cilantro
-pepper
-1/2 tomato
+handful shriveled carrots
+some old lentils
+a few leftover potatoes
+dried parsnips
 ~~~
 {: .output}
 
 ~~~
 $ git add ingredients.txt
-$ git commit -m "add tomato"
+$ git commit -m "I have some parsnips, would that help?"
 ~~~
 {: .bash}
 
 ~~~
- [master 7fb6b7e] add tomato
+ [master 7fb6b7e] I have some parsnips, would that help?
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
@@ -92,7 +92,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 337 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/guacmaster/guac.git
+To https://github.com/wanderer/stonesoup.git
    f237e9f..7fb6b7e  master -> master
 ~~~
 {: .output}
@@ -113,7 +113,7 @@ remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 3 (delta 0)
 Unpacking objects: 100% (3/3), done.
-From https://github.com/guacmaster/guac
+From https://github.com/wanderer/stonesoup
  * branch            master     -> FETCH_HEAD
 Updating 9272da5..29aba7c
 Fast-forward
