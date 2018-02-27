@@ -29,6 +29,7 @@ history](https://support.google.com/docs/answer/190843?hl=en).
 This informal version control by file name has other drawbacks. As this diagram shows,
 if you're not scrupulous about the names you choose, you can quickly lose track
 of the relationship between versions:
+
 [![Bryan J. (2017) Excuse me, do you have a moment to talk about version control? *PeerJ Preprints* 5:e3159v2 https://doi.org/10.7287/peerj.preprints.3159v2](../fig/Bryan_fig1.svg)](https://doi.org/10.7287/peerj.preprints.3159v2)
 
 Formal version control systems start with a base version of the document and
