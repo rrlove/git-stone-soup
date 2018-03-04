@@ -22,7 +22,7 @@ of configurations we will set as we get started with Git:
 
 On a command line, Git commands are written as `git verb`,
 where `verb` is what we actually want to do. So here is how
-Dracula sets up his new laptop:
+I would set up my new laptop:
 
 ~~~
 $ git config --global user.name "Becca Love"
